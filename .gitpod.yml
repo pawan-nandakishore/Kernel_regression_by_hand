@@ -1,9 +1,6 @@
-
-image:
-  file: .gitpod.Dockerfile
-
+tasks:
+    - init : pip install jupyterlab
+      command: jupyter lab
 ports:
-- port: 8080
-  onOpen: open-preview
-- port: 8888
-  onOpen: open-browser
+  - port: 8888
+    onOpen : open-browser
