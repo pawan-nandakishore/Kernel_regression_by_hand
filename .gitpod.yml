@@ -1,6 +1,8 @@
-tasks:
-    - init : pip install jupyterlab
-      command: jupyter lab
 ports:
-  - port: 8888
-    onOpen : open-browser
+- port: 8050
+  onOpen: open-preview
+- port: 8888
+  onOpen: open-browser
+tasks:
+- init: /workspace/Kernel_regression_by_hand/run.sh
+  command: cp -r /workspace/Kernel_regression_by_hand/.jupyter /home/gitpod/
